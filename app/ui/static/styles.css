@@ -1,0 +1,39 @@
+:root {
+  --bg: #0d1117;
+  --panel: #151b24;
+  --text: #d6dde8;
+  --muted: #8da1bb;
+  --accent: #4fa3ff;
+  --danger: #ff6b6b;
+}
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+header h1 { margin-bottom: 4px; }
+header p { color: var(--muted); }
+.controls { display: flex; gap: 12px; margin: 16px 0; }
+button {
+  background: var(--accent);
+  color: #081018;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+input { background: var(--panel); border: 1px solid #223042; color: var(--text); padding: 8px; border-radius: 6px; }
+.card {
+  background: var(--panel);
+  border: 1px solid #223042;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.metric { font-size: 14px; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #243447; padding: 8px; text-align: left; }
+.danger { color: var(--danger); font-weight: 700; }
