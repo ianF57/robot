@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <p>Decision-support research dashboard (no execution, no brokerage connectivity).</p>
+  </header>
+
+  <section class="controls">
+    <button id="refresh-btn">Refresh Analysis</button>
+    <input id="replay-date" type="datetime-local" />
+    <button id="replay-btn">Run Historical Replay (BTCUSDT)</button>
+  </section>
+
+  <main id="dashboard"></main>
+
+  <section>
+    <h2>Recent Signal Logs</h2>
+    <table id="logs-table">
+      <thead>
+        <tr><th>Timestamp</th><th>Asset</th><th>Signal</th><th>Direction</th><th>Confidence</th><th>Drawdown%</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
